@@ -1,0 +1,93 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body 
+{
+    width: 100vw;
+    height: 100vh;
+    background:linear-gradient(45deg,rgb(66, 66, 255),rgb(5, 206, 206));
+    background-repeat: no-repeat;    
+    background-position: 50% 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container 
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container  .Heading
+{
+    color: white;
+    font-size:30px;
+    font-weight: 800;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 1rem;
+}
+.container #textData
+{
+    min-width:40%;
+    min-height:10rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 23px;
+    margin-block: 1rem;
+    padding: 20px;
+    flex-wrap: wrap;
+    resize: none;
+    font-weight: 500;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+    outline: none;
+    border:none;
+    box-shadow: 5px 5px 5px rgb(53, 47, 47),
+                inset  3px 3px 3px rgb(53, 47, 47)
+    ;
+}
+.container .volume i{
+    font-size: 20px;
+    margin-top: 5px;
+}
+.container #volume
+{
+    -webkit-appearance: none;
+    margin-bottom: 1rem;
+    width: 13rem;
+    height: .8rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(81, 71, 71);
+    border: none;
+}
+.container #volume::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius:70%;
+    background: rgb(254, 32, 210);
+}
+
+.container button
+{
+    width: 9rem;
+    height: 3.3rem;
+    font-size: 22px;
+    font-weight: 00;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(19, 19, 125);
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 4px;
+}

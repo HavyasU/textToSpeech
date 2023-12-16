@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text To speech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="Heading">Text To Speech Converter</h2>
+        <textarea id="textData"  draggable=false aria-multiline="true" type="text"></textarea>
+        <div class="volume">
+            <i class="fa-solid fa-volume-down"></i>
+            <input type="range" name="volume" id="volume">
+            <i class="fa-solid fa-volume-high"></i>
+        </div>
+        <Button onclick="speak()">Speek&nbsp; <i class="fa-solid fa-microphone"></i></Button>
+    </div>
+</body>
+<script>
+    const textData = document.getElementById('textData');        
+    const volume = document.getElementById('volume'); 
+    let valumerange=volume.value; 
+    const speak = () => {
+        const text = textData.value;
+        utterance = new SpeechSynthesisUtterance(text);
+        // utterance.volume = valumerange.value/10;
+        utterance.volume = (valumerange/100);
+        if(text)
+        speechSynthesis.speak(utterance);
+    }
+    volume.addEventListener('change',()=>{
+        valumerange = volume.value;
+    })
+</script>
+
+</html>
